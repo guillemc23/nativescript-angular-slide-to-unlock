@@ -1,0 +1,38 @@
+<GridLayout
+  [background]="containerBackgroundColor"
+  width="100%"
+  margin="0"
+  padding="2"
+  [borderRadius]="radius"
+  [height]="buttonHeight"
+>
+  <Label
+    #infoText
+    width="100%"
+    textAlignment="center"
+    margin="0"
+    padding="0"
+    [color]="infoTextColor"
+    [fontSize]="infoTextSize"
+    [text]="infoText"
+    verticalAlignment="center"
+    [opacity]="1 - slidePercent * 1.5"
+  ></Label>
+  <Button
+    #slideButton
+    class="slideButton"
+    (pan)="slide($event)"
+    zIndex="0"
+    [borderRadius]="radius"
+    [width]="buttonHeight"
+    [height]="buttonHeight"
+    [color]="buttonTextColor"
+    [fontWeight]="buttonTextFontWeight"
+    [backgroundColor]="buttonBackgroundColor"
+    margin="0"
+    padding="0"
+    [fontSize]="buttonTextSize"
+    [text]="buttonText"
+    horizontalAlignment="left"
+  ></Button>
+</GridLayout>
